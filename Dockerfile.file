@@ -1,0 +1,4 @@
+FROM bitnami/spark:latest
+COPY my_spark.py /opt/bitnami/spark/work-dir/my_spark.py
+WORKDIR /opt/bitnami/spark/work-dir
+CMD ["spark-submit", "--master", "local", "my_spark.py"]
